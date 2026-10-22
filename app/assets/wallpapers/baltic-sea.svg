@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+  <!-- Baltic Sea - Ostsee mit Steg und Leuchtturm -->
+  <defs>
+    <linearGradient id="skyGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#87ceeb;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#b0e0e6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#e0f6ff;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="waterGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e3a8a;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#3b5bdb;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#5871eb;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="woodGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#8b4513;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#654321;stop-opacity:1" />
+    </linearGradient>
+    <filter id="mistBlur" x="0" y="0" width="100%" height="100%">
+      <feGaussianBlur stdDeviation="8" />
+    </filter>
+    <pattern id="waveSmall" patternUnits="userSpaceOnUse" width="100" height="30">
+      <path d="M0,15 Q25,5 50,15 T100,15" stroke="#ffffff" stroke-width="0.5" fill="none" opacity="0.4" />
+    </pattern>
+  </defs>
+  
+  <!-- Himmel -->
+  <rect width="1920" height="1080" fill="url(#skyGradient)" />
+  
+  <!-- Leichte Wolken -->
+  <ellipse cx="200" cy="150" rx="150" ry="50" fill="white" opacity="0.8" />
+  <ellipse cx="600" cy="100" rx="200" ry="60" fill="white" opacity="0.6" />
+  <ellipse cx="1200" cy="200" rx="180" ry="40" fill="white" opacity="0.7" />
+  <ellipse cx="1600" cy="120" rx="120" ry="30" fill="white" opacity="0.5" />
+  
+  <!-- Meer -->
+  <rect x="0" y="500" width="1920" height="580" fill="url(#waterGradient)" />
+  
+  <!-- Wellen auf dem Wasser -->
+  <rect x="0" y="500" width="1920" height="580" fill="url(#waveSmall)" opacity="0.6" />
+  
+  <!-- Horizontlinie -->
+  <line x1="0" y1="500" x2="1920" y2="500" stroke="#ffffff" stroke-width="1" opacity="0.3" />
+  
+  <!-- Steg -->
+  <rect x="800" y="700" width="320" height="15" fill="url(#woodGradient)" />
+  <rect x="800" y="715" width="15" height="200" fill="url(#woodGradient)" />
+  <rect x="815" y="715" width="15" height="200" fill="url(#woodGradient)" />
+  <rect x="830" y="715" width="15" height="200" fill="url(#woodGradient)" />
+  <rect x="1105" y="715" width="15" height="200" fill="url(#woodGradient)" />
+  <rect x="1120" y="715" width="15" height="200" fill="url(#woodGradient)" />
+  
+  <!-- Leuchtturm -->
+  <rect x="940" y="550" width="40" height="200" fill="white" />
+  <rect x="930" y="550" width="60" height="30" fill="#333333" />
+  <rect x="950" y="750" width="20" height="20" fill="#ff0000" />
+  <circle cx="950" cy="520" r="20" fill="#333333" />
+  <rect x="945" y="540" width="10" height="10" fill="white" />
+  
+  <!-- Leuchtstrahl -->
+  <path d="M950,520 L1000,400" stroke="#ffff00" stroke-width="3" opacity="0.8" />
+  
+  <!-- Felsen am Ufer -->
+  <path d="M100,700 Q150,650 200,700 Q250,680 300,700 L300,800 L250,850 L200,800 L150,850 L100,800 Z" fill="#5a5a5a" />
+  <path d="M1600,700 Q1650,650 1700,700 Q1750,680 1800,700 L1800,800 L1750,850 L1700,800 L1650,850 L1600,800 Z" fill="#4a4a4a" />
+  
+  <!-- Möwen am Himmel -->
+  <path d="M300,200 L320,210 L340,200" stroke="white" stroke-width="2" fill="none" opacity="0.7" />
+  <path d="M700,150 L720,160 L740,150" stroke="white" stroke-width="2" fill="none" opacity="0.7" />
+  <path d="M1200,250 L1220,260 L1240,250" stroke="white" stroke-width="2" fill="none" opacity="0.7" />
+  <path d="M1500,180 L1520,190 L1540,180" stroke="white" stroke-width="2" fill="none" opacity="0.7" />
+  
+  <!-- Nebelschwaden über dem Wasser -->
+  <rect x="0" y="600" width="1920" height="100" fill="white" opacity="0.1" filter="url(#mistBlur)" />
+  
+  <!-- Spiegelung des Stegs -->
+  <rect x="800" y="720" width="320" height="10" fill="#ffffff" opacity="0.2" filter="url(#mistBlur)" />
+</svg>

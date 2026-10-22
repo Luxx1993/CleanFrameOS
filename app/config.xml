@@ -1,13 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<widget xmlns="http://www.w3.org/ns/widgets" xmlns:tizen="http://tizen.org/ns/widgets" id="https://local.frame-home/app" version="0.6.1" viewmodes="maximized">
-  <tizen:application id="nClrkHome1.FrameHome" package="nClrkHome1" required_version="6.5"/>
-  <content src="index.html"/>
-  <name>CleanFrame</name>
-  <icon src="icon.png"/>
-  <feature name="http://tizen.org/feature/screen.size.normal.1080.1920"/>
-  <tizen:profile name="tv-samsung"/>
+<widget xmlns="http://www.w3.org/ns/widgets"
+        xmlns:tizen="http://tizen.org/ns/widgets"
+        id="com.example.CleanFrameNU7179"
+        version="1.0.0"
+        viewmodes="fullscreen">
+  
+  <tizen:application id="com.example.CleanFrameNU7179"
+                     required_version="4.0"
+                     package="com.example.CleanFrameNU7179"
+                     api-version="4.0"/>
+  
+  <name>CleanFrame NU7179</name>
+  <description>Persönlicher Homescreen für Samsung NU7179 mit deutschen Streaming-Diensten</description>
+  <author>Benutzer</author>
+  <license href="http://opensource.org/licenses/MIT">MIT</license>
+  
+  <icon src="icon.png" width="128" height="128"/>
+  <tizen:icon src="icon-256.png" width="256" height="256"/>
+  
+  <!-- Berechtigungen für App-Launch und Systemzugriff -->
   <tizen:privilege name="http://tizen.org/privilege/application.launch"/>
-  <tizen:privilege name="http://tizen.org/privilege/application.info"/>
-  <tizen:privilege name="http://tizen.org/privilege/tv.inputdevice"/>
-  <tizen:setting screen-orientation="landscape" context-menu="disable" background-support="disable" encryption="disable" install-location="auto" hwkey-event="enable"/>
+  <tizen:privilege name="http://tizen.org/privilege/appmanager.launch"/>
+  <tizen:privilege name="http://tizen.org/privilege/tv.window"/>
+  <tizen:privilege name="http://tizen.org/privilege/filesystem.read"/>
+  <tizen:privilege name="http://tizen.org/privilege/filesystem.write"/>
+  <tizen:privilege name="http://tizen.org/privilege/externalstorage"/>
+  
+  <!-- Einstellungen für TV-App -->
+  <tizen:setting background-support="enable" 
+                 encryption="disable" 
+                 install-location="auto" 
+                 hwkey="f1" 
+                 screen-orientation="landscape"/>
+  
+  <!-- Netzwerkzugriff (für mögliche zukünftige Updates) -->
+  <access origin="*" subdomains="true"/>
+  
+  <!-- Haupt-Datei -->
+  <content src="index.html"/>
+  
+  <!-- Features -->
+  <feature name="http://tizen.org/feature/tv">true</feature>
+  <feature name="http://tizen.org/feature/screen.size.normal">1920x1080</feature>
+  
 </widget>

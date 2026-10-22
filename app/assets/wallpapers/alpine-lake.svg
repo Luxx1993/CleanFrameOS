@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+  <!-- Alpine Lake - Bergsee mit Spiegelung -->
+  <defs>
+    <linearGradient id="skyGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#a8d8ff;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#7ac1e4;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#4a90e2;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="mountainGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#6b8cae;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#3a5a7a;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="waterGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e3a8a;stop-opacity:0.9" />
+      <stop offset="100%" style="stop-color:#0a2a5a;stop-opacity:0.9" />
+    </linearGradient>
+    <linearGradient id="snowGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#e0e0e0;stop-opacity:1" />
+    </linearGradient>
+    <filter id="reflectionBlur" x="0" y="0" width="100%" height="100%">
+      <feGaussianBlur stdDeviation="3" />
+    </filter>
+    <filter id="mistBlur" x="0" y="0" width="100%" height="100%">
+      <feGaussianBlur stdDeviation="10" />
+    </filter>
+  </defs>
+  
+  <!-- Himmel -->
+  <rect width="1920" height="1080" fill="url(#skyGradient)" />
+  
+  <!-- Leichte Wolken -->
+  <ellipse cx="300" cy="100" rx="200" ry="40" fill="white" opacity="0.8" />
+  <ellipse cx="1000" cy="150" rx="150" ry="50" fill="white" opacity="0.6" />
+  <ellipse cx="1600" cy="80" rx="180" ry="30" fill="white" opacity="0.7" />
+  
+  <!-- Bergketten im Hintergrund -->
+  <polygon points="0,500 200,400 400,450 600,350 800,400 1000,300 1200,350 1400,300 1600,400 1800,350 1920,450 1920,1080 0,1080" fill="url(#mountainGradient)" opacity="0.8" />
+  
+  <!-- Schneebedeckte Gipfel -->
+  <polygon points="200,400 300,350 400,380 500,300 600,350" fill="url(#snowGradient)" opacity="0.9" />
+  <polygon points="800,400 900,350 1000,300 1100,350 1200,380" fill="url(#snowGradient)" opacity="0.9" />
+  <polygon points="1400,300 1500,250 1600,300 1700,280 1800,350" fill="url(#snowGradient)" opacity="0.9" />
+  
+  <!-- See -->
+  <ellipse cx="960" cy="800" rx="600" ry="200" fill="url(#waterGradient)" />
+  
+  <!-- Spiegelung der Berge im See -->
+  <polygon points="300,800 400,780 600,760 800,780 1000,760 1200,780 1400,760 1600,780" fill="url(#mountainGradient)" opacity="0.3" filter="url(#reflectionBlur)" />
+  
+  <!-- Spiegelung der Schneegipfel -->
+  <polygon points="400,780 500,770 600,760" fill="url(#snowGradient)" opacity="0.4" filter="url(#reflectionBlur)" />
+  <polygon points="1000,760 1100,770 1200,780" fill="url(#snowGradient)" opacity="0.4" filter="url(#reflectionBlur)" />
+  
+  <!-- Ufereinfassung -->
+  <path d="M0,800 Q200,780 400,800 Q600,820 800,800 Q1000,780 1200,800 Q1400,820 1600,800 Q1800,780 1920,800 L1920,1080 L0,1080 Z" fill="#5a7a5a" />
+  
+  <!-- Felsen am Ufer -->
+  <path d="M50,800 Q100,750 150,800 Q200,780 250,800 L250,850 L200,900 L150,850 L100,900 L50,850 Z" fill="#4a4a4a" />
+  <path d="M1700,800 Q1750,750 1800,800 Q1850,780 1900,800 L1900,850 L1850,900 L1800,850 L1750,900 L1700,850 Z" fill="#3a3a3a" />
+  
+  <!-- Nebelschwaden über dem See -->
+  <ellipse cx="500" cy="750" rx="300" ry="50" fill="white" opacity="0.1" filter="url(#mistBlur)" />
+  <ellipse cx="1200" cy="780" rx="250" ry="40" fill="white" opacity="0.1" filter="url(#mistBlur)" />
+  
+  <!-- Subtile Wasserwellen -->
+  <path d="M300,800 Q350,795 400,800 Q450,805 500,800 Q550,795 600,800 Q650,805 700,800" stroke="#ffffff" stroke-width="1" fill="none" opacity="0.2" />
+  <path d="M1000,800 Q1050,805 1100,800 Q1150,795 1200,800 Q1250,805 1300,800" stroke="#ffffff" stroke-width="1" fill="none" opacity="0.2" />
+</svg>

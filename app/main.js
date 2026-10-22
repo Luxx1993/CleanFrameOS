@@ -46,11 +46,11 @@
   var PRIVATE_FONTS = window.CleanFramePrivateFontIDs || [], fontMetrics = {}, unavailableFonts = {}, widthCache = {}, fontsReady = false;
   var LOOK_KEYS = ['bg', 'layout', 'apps', 'font', 'controls', 'focus', 'material'];
   var LOOK_VALUES = { bg: ['dark', 'light', 'photo'], layout: ['list', 'dock'], apps: ['icons', 'both', 'text'], font: Object.keys(FONTS).filter(function (id) { return id === 'manrope' || PRIVATE_FONTS.indexOf(id) >= 0; }), controls: ['icons', 'both', 'text'], focus: ['type', 'glass'], material: ['soft', 'frost', 'tint'] };
-  var LOOK_NAMES = { bg: 'Background', layout: 'Layout', apps: 'Apps', font: 'Font', controls: 'Home controls', focus: 'Focus', material: 'Material' };
-  var VALUE_NAMES = { dark: 'Dark', light: 'Light', photo: 'Photo', list: 'List', dock: 'Dock', type: 'Type', glass: 'Glass', soft: 'Soft', frost: 'Frost', tint: 'Clear tint', icons: 'Icons', both: 'Icons and text', text: 'Text' };
-  var UTIL = { art: ['Art Mode', 'art'], apps: ['All apps', 'apps'], arrange: ['Arrange', 'arrange'], settings: ['Settings', 'settings'] };
+  var LOOK_NAMES = { bg: 'Hintergrund', layout: 'Layout', apps: 'Apps', font: 'Schriftart', controls: 'Steuerelemente', focus: 'Fokus', material: 'Material' };
+  var VALUE_NAMES = { dark: 'Dunkel', light: 'Hell', photo: 'Foto', list: 'Liste', dock: 'Dock', type: 'Typ', glass: 'Glas', soft: 'Weich', frost: 'Frost', tint: 'Klare Tönung', icons: 'Symbole', both: 'Symbole und Text', text: 'Text' };
+  var UTIL = { art: ['Art Modus', 'art'], apps: ['Alle Apps', 'apps'], arrange: ['Anordnen', 'arrange'], settings: ['Einstellungen', 'settings'] };
   var MSG = {
-    leave: { title: 'Leave Home?', line: 'Open Samsung Home?', note: '', actions: [['stay', 'Stay'], ['samsung', 'Samsung Home']] }
+    leave: { title: 'Homescreen verlassen?', line: 'Samsung Home öffnen?', note: '', actions: [['bleiben', 'Bleiben'], ['samsung', 'Samsung Home']] }
   };
   var SVG = {
     art: '<rect x="3.5" y="4.5" width="17" height="15" rx="2"/><circle cx="9" cy="9.8" r="1.5"/><path d="m4.5 17.5 4.5-4.5 3 3 2.5-2.5 5 5"/>',

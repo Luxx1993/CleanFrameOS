@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+  <!-- Bavarian Alps - Sanfte Morgenstimmung mit Bergsilhouetten -->
+  <defs>
+    <linearGradient id="skyGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#f5f7fa;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#c3cfe2;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#a8b8d8;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="mountainGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#5a6b85;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#3a4a65;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="mistGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#ffffff;stop-opacity:0.1" />
+    </linearGradient>
+    <filter id="mistBlur" x="0" y="0" width="100%" height="100%">
+      <feGaussianBlur stdDeviation="10" />
+    </filter>
+  </defs>
+  
+  <!-- Himmel -->
+  <rect width="1920" height="1080" fill="url(#skyGradient)" />
+  
+  <!-- Nebelschichten -->
+  <rect x="0" y="600" width="1920" height="200" fill="url(#mistGradient)" filter="url(#mistBlur)" opacity="0.6" />
+  <rect x="0" y="750" width="1920" height="150" fill="url(#mistGradient)" filter="url(#mistBlur)" opacity="0.4" />
+  
+  <!-- Bergsilhouetten - Hintergrund -->
+  <polygon points="0,800 300,600 600,700 900,500 1200,650 1500,450 1920,600 1920,1080 0,1080" fill="url(#mountainGradient)" opacity="0.9" />
+  
+  <!-- Bergsilhouetten - Vordergrund -->
+  <polygon points="0,1080 200,850 400,900 600,750 800,800 1000,700 1200,750 1400,700 1600,800 1800,750 1920,850 1920,1080" fill="url(#mountainGradient)" opacity="0.95" />
+  
+  <!-- Leichte Nebelschwaden -->
+  <ellipse cx="150" cy="850" rx="200" ry="50" fill="white" opacity="0.15" filter="url(#mistBlur)" />
+  <ellipse cx="800" cy="750" rx="300" ry="80" fill="white" opacity="0.12" filter="url(#mistBlur)" />
+  <ellipse cx="1500" cy="800" rx="250" ry="60" fill="white" opacity="0.15" filter="url(#mistBlur)" />
+  
+  <!-- Subtile Textur für Tiefe -->
+  <rect x="0" y="0" width="1920" height="1080" fill="url(#skyGradient)" opacity="0.05" />
+</svg>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+  <!-- Rhine River - Flusslandschaft bei Sonnenuntergang -->
+  <defs>
+    <linearGradient id="skyGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#ff9a8b;stop-opacity:1" />
+      <stop offset="30%" style="stop-color:#ff6b5a;stop-opacity:1" />
+      <stop offset="60%" style="stop-color:#a855f7;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#5a67d8;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="waterGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#2a4365;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1a2a4a;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="reflectionGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#ff9a8b;stop-opacity:0.3" />
+      <stop offset="50%" style="stop-color:#ff6b5a;stop-opacity:0.2" />
+      <stop offset="100%" style="stop-color:#a855f7;stop-opacity:0.1" />
+    </linearGradient>
+    <filter id="waterBlur" x="0" y="0" width="100%" height="100%">
+      <feGaussianBlur stdDeviation="2" />
+    </filter>
+    <pattern id="wavePattern" patternUnits="userSpaceOnUse" width="200" height="50">
+      <path d="M0,25 Q50,10 100,25 T200,25" stroke="#ffffff" stroke-width="1" fill="none" opacity="0.3" />
+    </pattern>
+  </defs>
+  
+  <!-- Himmel -->
+  <rect width="1920" height="1080" fill="url(#skyGradient)" />
+  
+  <!-- Sonne am Horizont -->
+  <circle cx="1800" cy="200" r="80" fill="#ffd700" opacity="0.8" />
+  <circle cx="1800" cy="200" r="60" fill="#ffcc00" opacity="0.9" />
+  
+  <!-- Lichtreflexion auf dem Wasser -->
+  <ellipse cx="1800" cy="200" rx="600" ry="100" fill="url(#reflectionGradient)" opacity="0.4" filter="url(#waterBlur)" />
+  
+  <!-- Fluss -->
+  <path d="M0,600 Q400,550 800,600 Q1200,650 1600,620 Q1800,600 1920,600 L1920,1080 L0,1080 Z" fill="url(#waterGradient)" />
+  
+  <!-- Wellenmuster auf dem Fluss -->
+  <path d="M0,600 Q400,550 800,600 Q1200,650 1600,620 Q1800,600 1920,600" fill="none" stroke="url(#wavePattern)" stroke-width="10" opacity="0.5" />
+  
+  <!-- Uferbereiche -->
+  <rect x="0" y="600" width="400" height="480" fill="#3a5a3a" />
+  <rect x="1520" y="620" width="400" height="460" fill="#4a6a4a" />
+  
+  <!-- Bäume am Ufer -->
+  <path d="M50,600 L30,500 L10,550 L0,450 L25,350 L50,450 L75,350 L100,450 L80,550 L60,500 Z" fill="#2a4a2a" opacity="0.8" />
+  <path d="M150,600 L130,520 L110,570 L90,470 L115,370 L150,470 L185,370 L200,470 L180,570 L160,520 Z" fill="#2a4a2a" opacity="0.8" />
+  <path d="M1550,620 L1530,540 L1510,590 L1490,490 L1515,390 L1550,490 L1585,390 L1600,490 L1580,590 L1560,540 Z" fill="#3a5a3a" opacity="0.8" />
+  <path d="M1700,620 L1680,560 L1660,610 L1640,510 L1665,410 L1700,510 L1735,410 L1750,510 L1730,610 L1710,560 Z" fill="#3a5a3a" opacity="0.8" />
+  
+  <!-- Hügel im Hintergrund -->
+  <path d="M0,600 Q200,500 400,550 Q600,520 800,550 Q1000,580 1200,560 Q1400,540 1600,570 Q1800,590 1920,600 L1920,400 L0,400 Z" fill="#5a7a5a" opacity="0.6" />
+  
+  <!-- Spiegelung der Hügel im Wasser -->
+  <path d="M0,600 Q200,620 400,630 Q600,640 800,630 Q1000,620 1200,635 Q1400,645 1600,635 Q1800,625 1920,600" fill="none" stroke="#ffffff" stroke-width="1" opacity="0.15" />
+  
+  <!-- Nebelschwaden über dem Fluss -->
+  <ellipse cx="960" cy="600" rx="800" ry="50" fill="white" opacity="0.1" filter="url(#waterBlur)" />
+</svg>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+  <!-- Black Forest - Dunkler Wald mit Lichtungen -->
+  <defs>
+    <linearGradient id="skyGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#2a3a4a;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#1a2a3a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0a1a2a;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="forestGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#3a4a3a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1a2a1a;stop-opacity:1" />
+    </linearGradient>
+    <radialGradient id="lightRay" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.3" />
+      <stop offset="100%" style="stop-color:#ffffff;stop-opacity:0" />
+    </radialGradient>
+    <filter id="softBlur" x="0" y="0" width="100%" height="100%">
+      <feGaussianBlur stdDeviation="5" />
+    </filter>
+    <pattern id="treePattern" patternUnits="userSpaceOnUse" width="100" height="200">
+      <path d="M50,200 L40,100 L30,150 L20,80 L10,120 L0,50 L25,0 L50,25 L75,0 L100,50 L90,120 L80,80 L70,150 L60,100 Z" fill="#2a3a2a" opacity="0.8" />
+    </pattern>
+  </defs>
+  
+  <!-- Dunkler Himmel mit Sternen -->
+  <rect width="1920" height="1080" fill="url(#skyGradient)" />
+  
+  <!-- Sternenhimmel -->
+  <circle cx="150" cy="80" r="1.5" fill="white" opacity="0.8" />
+  <circle cx="300" cy="120" r="1" fill="white" opacity="0.6" />
+  <circle cx="500" cy="50" r="2" fill="white" opacity="0.9" />
+  <circle cx="700" cy="150" r="1.2" fill="white" opacity="0.7" />
+  <circle cx="900" cy="80" r="1.8" fill="white" opacity="0.8" />
+  <circle cx="1100" cy="120" r="1" fill="white" opacity="0.6" />
+  <circle cx="1300" cy="60" r="1.5" fill="white" opacity="0.8" />
+  <circle cx="1500" cy="100" r="1.2" fill="white" opacity="0.7" />
+  <circle cx="1700" cy="140" r="1.5" fill="white" opacity="0.8" />
+  
+  <!-- Mond -->
+  <circle cx="1600" cy="200" r="30" fill="#f5f5f5" opacity="0.9" />
+  <circle cx="1590" cy="190" r="5" fill="#2a3a4a" opacity="0.4" />
+  
+  <!-- Lichtstrahlen vom Mond -->
+  <ellipse cx="1600" cy="200" rx="400" ry="200" fill="url(#lightRay)" opacity="0.2" filter="url(#softBlur)" />
+  
+  <!-- Waldhintergrund -->
+  <rect x="0" y="500" width="1920" height="580" fill="url(#forestGradient)" />
+  
+  <!-- Bäume - mehrere Schichten -->
+  <rect x="0" y="600" width="1920" height="400" fill="url(#treePattern)" opacity="0.6" />
+  <rect x="0" y="700" width="1920" height="300" fill="url(#treePattern)" opacity="0.8" />
+  <rect x="0" y="800" width="1920" height="200" fill="url(#treePattern)" opacity="0.9" />
+  
+  <!-- Einzelne Baum-Silhouetten für Tiefe -->
+  <path d="M100,1080 L80,900 L60,950 L40,850 L20,900 L0,800 L50,600 L100,700 L150,600 L200,750 L180,850 L160,900 L140,880 L120,920 Z" fill="#1a2a1a" opacity="0.9" />
+  <path d="M500,1080 L480,950 L460,1000 L440,920 L420,980 L400,900 L450,700 L500,800 L550,700 L600,850 L580,950 L560,920 L540,980 Z" fill="#1a2a1a" opacity="0.9" />
+  <path d="M1000,1080 L980,980 L960,1020 L940,940 L920,1000 L900,920 L950,750 L1000,850 L1050,750 L1100,900 L1080,980 L1060,940 L1040,1020 Z" fill="#1a2a1a" opacity="0.9" />
+  <path d="M1500,1080 L1480,950 L1460,1000 L1440,920 L1420,980 L1400,900 L1450,700 L1500,800 L1550,700 L1600,850 L1580,950 L1560,920 L1540,980 Z" fill="#1a2a1a" opacity="0.9" />
+  
+  <!-- Nebelschwaden am Boden -->
+  <rect x="0" y="950" width="1920" height="130" fill="white" opacity="0.08" filter="url(#softBlur)" />
+</svg>
